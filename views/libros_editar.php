@@ -80,7 +80,7 @@
                         </select><br></br>
 
             FOTO <br><br>
-                <img src="./imagenes/<?php echo $datoslibro['foto']?>"><br><br>
+                <img src="./imagenes/<?php echo $datoslibro['foto']?>" width="100" height="150"><br><br>
         
             <p>
                 <label for="file">FOTO</label>

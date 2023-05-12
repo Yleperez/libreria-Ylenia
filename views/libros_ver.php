@@ -89,7 +89,7 @@
             <th>EDITORIAL</th>
          </tr>
          <tr>
-         <td><img src="./imagenes/<?php echo $libro['foto']?>"></td>
+         <td><img src="./imagenes/<?php echo $libro['foto']?>" width="100" height="150"></td>
             <td><?php echo $libro['titulo'] ?></td>
             <td><?php echo number_format($libro['precio'],2)?></td>
             <td><?php echo $libro['descripcion'] ?></td>

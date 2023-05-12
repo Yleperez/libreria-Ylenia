@@ -1,15 +1,19 @@
+<?php
+    include 'header.php';
+?>
+
 <html>
    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!---<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">---->
         <link rel='stylesheet' type='text/css' media='screen' href='miestilo.css'>
       
         <title>NUESTRA LIBRERÍA</title>
         <style>
-        h1{
+         h1{
             text-align:center;
         }
 
@@ -28,16 +32,37 @@
             font-size: 8px;
         }
 
-        img{
-            width:100px;
-            height:120px;
+        img {
+            margin: 10px;
+            border-radius: 8px;
         }
+        
+        tr{
+            justify-content:center;
+            align-items:center;
+            align-content:center;
+            text-align: center;
+        }
+        td{
+            justify-content:center;
+            align-items:center;
+            align-content:center;
+            padding: 50px;
+            border: 1px black;
+            text-align: center;
+        }
+        table{
+            border: 5px solid green;
+            text-align: center;
+        }
+
         </style>
    </head>
    <body>
-      <h1>NUESTRAS NOVEDADES</h1><br></br>
       
-      <meta charset="utf-8">
+    <h1>NUESTRAS NOVEDADES</h1><br></br>
+      
+      <!---<meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -64,8 +89,7 @@
 	      <a href="#" class="fa fa-instagram"></a>
 	      <a href="#" class="fa fa-facebook"></a>
 	      <a href="#" class="fa fa-android"></a>
-    </p>
-      
+    </p>--->
       
       <a href="index.php?controller=libros&action=nuevo">Nuevo Libro</a><br></br>
       
@@ -78,10 +102,13 @@
             <th>DESCRIPCIÓN</th>
             <th>N_PGAS</th>
             <th>EDITORIAL</th>
+            <th>OPCIONES</th>
+            <th>OPCIONES</th>
+            <th>OPCIONES</th>
          </tr>
          <?php foreach ($libros as $libro):?>
             <tr>
-               <td><img src="./imagenes/<?php echo $libro['foto']?>"></td>
+               <td><img src="./imagenes/<?php echo $libro['foto']?>" width="100" height="150"></td>
                <td><?php echo $libro['titulo'] ?></td>
                <td><?php echo number_format($libro['precio'],2) ?></td>
                <td><?php echo $libro['descripcion'] ?></td>
