@@ -62,6 +62,7 @@
             <li><a href="libros_eventos.php">EVENTOS</a></li>
             <li><a href="/libreria/index.php?controller=libros&action=listar">NOVEDADES</a></li>
             <li><a href="libros_contacto.php">CONTACTO</a></li>
+            <li><a href="libros_sesion.php">INICIAR SESIÓN</a></li>
         </ul>
     </div>
     </nav>

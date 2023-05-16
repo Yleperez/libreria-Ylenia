@@ -4,14 +4,20 @@
 
 <html>
    <head>
-        <!---<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!---<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">---->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel='stylesheet' type='text/css' media='screen' href='miestilo.css'>
-      
+        
         <title>NUESTRA LIBRERÍA</title>
+        
         <style>
          h1{
             text-align:center;
@@ -19,6 +25,10 @@
 
         p{
             text-align: center;
+        }
+
+        p[class=enlace], select{
+            text-align: left;
         }
         
         p{
@@ -91,7 +101,11 @@
 	      <a href="#" class="fa fa-android"></a>
     </p>--->
       
-      <a href="index.php?controller=libros&action=nuevo">Nuevo Libro</a><br></br>
+    <div>
+    <P class="enlace">
+    <a href="index.php?controller=libros&action=nuevo">Nuevo Libro</a><br></br>
+    </P>
+    </div>
       
       <div class="container">
       <table  class="table table-bordered" border="1">

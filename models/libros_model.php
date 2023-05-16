@@ -22,6 +22,33 @@ class Libros_Model
       return $libro;
    }
 
+   function getSesion($id){
+      $query = ('SELECT * FROM users');
+      $stm = $this->db->prepare($query);
+      $stm = execute(array($id));
+      $users = $result->fetchall();
+
+      session_start();
+         if (isset($_POST['login'])) {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $query = $connection->prepare("SELECT * FROM users WHERE USERNAME=:username");
+            $query->bindParam("username", $username, PDO::PARAM_STR);
+            $query->execute();
+            $result = $query->fetch(PDO::FETCH_ASSOC);
+            if (!$result) {
+               echo '<p class="error">Error al introducir el nombre y la contraseña!</p>';
+            } else {
+               if (password_verify($password, $result['PASSWORD'])) {
+                     $_SESSION['user_id'] = $result['ID'];
+                     echo '<p class="success">Congratulations, has iniciado sesión correctamente!</p>';
+               } else {
+                     echo '<p class="error">Error al introducir el nombre y la contraseña!</p>';
+               }
+            }
+         }
+   }
+
    function deleteLibro($id)
    {
       $query = 'DELETE FROM libros WHERE id = ?';

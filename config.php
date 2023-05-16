@@ -18,3 +18,4 @@ $config->set('dbuser', 'root');
 $config->set('dbpass', '');
 
 ?>
+

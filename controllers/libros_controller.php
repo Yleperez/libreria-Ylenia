@@ -178,6 +178,27 @@ class Libros_Controller
       include('views/libros_editar.php');
    }
 
+   function sesion()
+   {
+      require 'models/Libros_Model.php';
+      require 'models/editoriales_model.php';
+      require 'models/sesion_model.php';
+
+      session_start();
+         
+         if(!isset($_SESSION['user_id'])){
+         header('Location: sesion.php');
+         exit;
+         } else {
+         // Show users the page! 
+         }
+      
+      $Sesion_model = new Sesion_Model();
+      $sesion = $Sesion_model->getUsers();
+
+      include('views/libros_sesion.php');
+   }
+
 }
 
 
